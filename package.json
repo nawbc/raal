@@ -1,0 +1,24 @@
+{
+	"name": "create-muguet-lib",
+	"version": "1.0.0",
+	"description": "create react template that uses for creating react library, document site and dev server",
+	"main": "index.js",
+	"scripts": {},
+	"bin": {
+		"create-muguet-lib": "cli.js"
+	},
+	"keywords": [
+		"react",
+		"template",
+		"create-react-app"
+	],
+	"author": "HanWang",
+	"license": "MIT",
+	"dependencies": {
+		"babel-eslint": "^10.0.2",
+		"chalk": "^2.4.2",
+		"commander": "^2.20.0",
+		"fs-extra": "7.0.1",
+		"semver": "^6.2.0"
+	}
+}

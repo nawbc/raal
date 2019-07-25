@@ -1,0 +1,58 @@
+{
+	"eslint.autoFixOnSave": true,
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		{
+			"language": "typescript",
+			"autoFix": true
+		}
+	],
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"cSpell.enabledLanguageIds": [
+		"asciidoc",
+		"c",
+		"cpp",
+		"csharp",
+		"css",
+		"git-commit",
+		"go",
+		"handlebars",
+		"html",
+		"jade",
+		"java",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"jsonc",
+		"latex",
+		"less",
+		"markdown",
+		"php",
+		"plaintext",
+		"pug",
+		"python",
+		"restructuredtext",
+		"rust",
+		"scala",
+		"scss",
+		"text",
+		"typescript",
+		"typescriptreact",
+		"yaml",
+		"yml"
+	],
+	"cSpell.language": "en,en-US",
+	"cSpell.words": [
+		"app",
+		"devtool",
+		"muguet",
+		"package",
+		"polyfill",
+		"react",
+		"readonly",
+		"wlan"
+	],
+}

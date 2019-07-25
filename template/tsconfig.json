@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"plugins": [
+			{
+				"name": "typescript-tslint-plugin"
+			}
+		],
+		"jsx": "react",
+		"strictNullChecks": true,
+		"esModuleInterop": true,
+		"noImplicitThis": true,
+		"noEmitOnError": true,
+		"noUnusedParameters": false,
+		"noUnusedLocals": false,
+		"baseUrl": "./",
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"target": "es5",
+		"outDir": "release/lib",
+		"lib": [
+			"dom",
+			"es7",
+			"es6",
+			"es5",
+			"dom",
+			"dom.iterable"
+		],
+	},
+	"exclude": [
+		"node_modules"
+	]
+}
