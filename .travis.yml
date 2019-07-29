@@ -8,8 +8,9 @@ cache:
     - node_modules
 
 script:
+  - cd ./template
+  - npm install
   - npm test
-  - npm codecov
 
 env:
   global:

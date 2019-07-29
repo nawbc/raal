@@ -1,53 +1,62 @@
 # create-muguet-lib
 
-这是一个用于 react ui 组件库开发的脚手架, 具有文档网站开发,ui 组件开发的功能
+This is a scaffold for react UI component library development. It has the functions of document website development and UI component development.
 
-## 1. 使用方法
+[中文](https://github.com/sewerganger/create-muguet-lib/blob/master/README-zh.md)
 
-### 全局命令
+## 1. Usage
+
+### Global commands
 
 ```shell
 Usage: cli [options]
 Options:
-  -v, --version          output the version number
-  -a,  --author <name>   add Author
-  -l,  --license <name>  add License
-  -h, --help             output usage information
+- v,--version output the version number
+
+- a, - - author < name > add Author
+
+- l, - - license < name > add License
+
+- h,--help output usage information
+
 ```
 
-### 模板中的命令
+### Commands in Templates
 
-- npm start _打开文档开发环境，提供组件开发和文档网站开发的 development 环境_
+- npm start | _opens the document development environment to provide the development environment for component development and document website development_
 
-- npm run lib _使用 babel 编译组件库 到 release/lib 文件夹下 ,main 字段指向 release/lib/exports.js_
+- npm run lib | _Use Babel to compile the component library to the release/lib folder, and the main field points to release/lib/exports.jsr_
 
-- npm run es _tsc 直接编译到 release/es 文件夹下 module 字段指向 release/es/exports.js_
+- npm run es | _tsc is compiled directly into module field under release/es folder to point to release/es/exports. js_
 
-- npm run dist _webpack 打包 到 release/dist 文件夹下_
+- npm run dist | _webpack package to release/dist folder_
 
-- npm run app _webpack 打包文档网站_
+- npm run app | _webpack packaged document website_
 
-- **npm run release** _发布同时进行 lib es dist app_
+- _npm run release_ | _running lib, es, dist, app_
 
-- npm run dts _向 release 中写入 d.ts_
+- npm run dts | _writes d.ts to release_
 
-- npm run scss:watch _监听并编译 scss 支持 compass_
+- npm run scss:watch | _listens and compiles (**support compass**)_
 
-- npm run scss _编译 scss_
+- npm run scss | _compiles scss_
 
-### 例子
+### Examples
 
-create-muguet-lib app (不能含有 react)
-npm install 安装依赖
+Create-muguet-lib app (cannot contain react)
 
-## 2. 自定义
+npm install installation dependency
 
-## 3. 开发状态
+## 2. Customization
 
-- [x] 库打包
-- [x] 文档网站打包
-- [ ] 测试单元
+## 3. Development status
 
-## 4. 其他
+- [x] library packaging
 
-如果你想只用于 app 开发也行 毕竟我 copy 了很多 create-react-app 的代码 🤭🤭
+- [x] Document Web Packing
+
+- [ ] Test Unit
+
+## 4. Other
+
+If you want to use it only for app development, after all, I copy a lot of create-react-app code.
