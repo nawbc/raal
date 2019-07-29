@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - '10'
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm test
+  - npm codecov
+
+env:
+  global:
+    - CODECOV_TOKEN="019eb49e-8711-4953-aa41-90c572bbcdb1"
