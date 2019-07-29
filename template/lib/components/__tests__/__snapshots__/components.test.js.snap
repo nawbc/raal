@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A suite Snapshot 1`] = `
+<div
+  className="muguet"
+  onClick={[Function]}
+>
+  
+   create-muguet-lib
+</div>
+`;
+
+exports[`A suite Snapshot 2`] = `
+<div
+  className="muguet"
+  onClick={[Function]}
+>
+  <span>
+    love 
+  </span>
+   create-muguet-lib
+</div>
+`;

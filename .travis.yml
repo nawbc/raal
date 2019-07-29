@@ -2,16 +2,23 @@ language: node_js
 
 node_js:
   - "10"
+  - "9"
+  - "8"
 
 cache:
   directories:
     - node_modules
 
-script:
+install:
   - cd ./template
   - npm install
+
+script:
   - npm test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t bd585d3e-9ca3-4ad9-832d-33cb3fd10359
 
 env:
   global:
-    - CODECOV_TOKEN="019eb49e-8711-4953-aa41-90c572bbcdb1"
+    - CODECOV_TOKEN="bd585d3e-9ca3-4ad9-832d-33cb3fd10359"

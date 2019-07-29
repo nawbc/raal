@@ -16,9 +16,7 @@
 		"dts:es": "tsc -d --emitDeclarationOnly -p ./include.json --declarationDir ./release/es",
 		"scss:watch": "node-sass lib -o lib -w --importer ./.scripts/utils/compass.js",
 		"scss": "node-sass lib -o lib --importer ./.scripts/utils/compass.js",
-		"test:lib": "",
-		"test:app": "",
-		"test": "jest"
+		"test": "jest -u"
 	},
 	"dependencies": {
 		"@babel/polyfill": "^7.4.4"
@@ -31,6 +29,12 @@
 	"devDependencies": {
 		"@babel/core": "7.4.3",
 		"@svgr/webpack": "4.2.0",
+		"@types/jest": "^24.0.16",
+		"@types/node": "^12.6.8",
+		"@types/react": "^16.8.23",
+		"@types/react-dom": "^16.8.5",
+		"@types/react-intl": "^2.3.18",
+		"@types/react-router-dom": "^4.3.4",
 		"@typescript-eslint/eslint-plugin": "1.10.2",
 		"@typescript-eslint/parser": "1.10.2",
 		"babel-eslint": "^10.0.1",
@@ -58,6 +62,7 @@
 		"react-app-polyfill": "^1.0.1",
 		"react-dev-utils": "^9.0.1",
 		"react-dom": "^16.8.6",
+		"react-test-renderer": "^16.8.6",
 		"recursive-copy": "^2.0.10",
 		"resolve": "^1.11.1",
 		"sass-loader": "7.1.0",
