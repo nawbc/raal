@@ -16,10 +16,10 @@ This is a scaffold for react UI component library development. It has the functi
 ```shell
 Usage: cli [options]
 Options:
-  - v,--version output the version number
-  - a, - - author < name > add Author
-  - l, - - license < name > add License
-  - h,--help output usage information
+  - v, --version output the version number
+  - a, --author <name> add Author
+  - l, --license <name> add License
+  - h, --help output usage information
 ```
 
 ### Commands in Templates
