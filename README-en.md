@@ -1,8 +1,13 @@
 # create-muguet-lib
+![](https://travis-ci.com/sewerganger/create-muguet-lib.svg?branch=master)
+![](https://img.shields.io/github/languages/top/sewerganger/create-muguet-lib)
+![](https://img.shields.io/github/package-json/v/sewerganger/create-muguet-lib/master)
+![](https://img.shields.io/github/license/sewerganger/create-muguet-lib)
+[![codecov](https://codecov.io/gh/sewerganger/create-muguet-lib/branch/master/graph/badge.svg)](https://codecov.io/gh/sewerganger/create-muguet-lib)
 
 This is a scaffold for react UI component library development. It has the functions of document website development and UI component development.
 
-[中文](https://github.com/sewerganger/create-muguet-lib/blob/master/README-zh.md)
+[中文](./README.md)
 
 ## 1. Usage
 
@@ -11,35 +16,47 @@ This is a scaffold for react UI component library development. It has the functi
 ```shell
 Usage: cli [options]
 Options:
-- v,--version output the version number
-
-- a, - - author < name > add Author
-
-- l, - - license < name > add License
-
-- h,--help output usage information
-
+  - v,--version output the version number
+  - a, - - author < name > add Author
+  - l, - - license < name > add License
+  - h,--help output usage information
 ```
 
 ### Commands in Templates
 
-- npm start | _opens the document development environment to provide the development environment for component development and document website development_
+- npm start
 
-- npm run lib | _Use Babel to compile the component library to the release/lib folder, and the main field points to release/lib/exports.jsr_
+  - _Open Document Development Environment to Provide Development Environment for Component Development and Document Website Development_
 
-- npm run es | _tsc is compiled directly into module field under release/es folder to point to release/es/exports. js_
+- npm run lib
+  - _Use Babel to compile component libraries into release/lib folder and generate d.ts. The main field points to release/lib/exports.js_
 
-- npm run dist | _webpack package to release/dist folder_
+- npm run es
+  - _tsc is compiled directly into the release/es folder and the d.ts module field is generated to point to release/es/exports..js_
 
-- npm run app | _webpack packaged document website_
+- npm run dist
+  - _webpack package to release/dist folder_
 
-- _npm run release_ | _running lib, es, dist, app_
+- npm run app
+  - _webpack packaged document website_
 
-- npm run dts | _writes d.ts to release_
+- **npm run release**
+  - _running lib, es, dist, app_
 
-- npm run scss:watch | _listens and compiles (**support compass**)_
+- npm run dts:es
+  - _Write d.ts to releases_
 
-- npm run scss | _compiles scss_
+- npm run dts:lib
+  - _Write d.ts to release Lib_
+
+- npm run dts
+  - _writes d.ts to release_
+
+- npm run scss:watch
+  - _listens and compiles (**support compass**)_
+
+- npm run scss
+  - _compiles scss_
 
 ### Examples
 
@@ -47,16 +64,21 @@ Create-muguet-lib app (cannot contain react)
 
 npm install installation dependency
 
-## 2. Customization
+## 2. Attention
+
+1. Preload processors use scss
+2. CI uses Travis
+3. Coverage using codecov
+4. The test unit opens snaptshot by default with jest + enzyme
+5. Change some default settings in `.script/config.json`
 
 ## 3. Development status
 
 - [x] library packaging
-
 - [x] Document Web Packing
-
-- [ ] Test Unit
+- [x] Test Unit
+- [ ] Custom Use Library
 
 ## 4. Other
 
-If you want to use it only for app development, after all, I copy a lot of create-react-app code.
+If you want to use it only for app development, I copy a lot of create-react-app code.

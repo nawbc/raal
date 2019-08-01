@@ -26,43 +26,33 @@ Options:
 ### 模板中的命令
 
 - npm start
-
   - _打开文档开发环境，提供组件开发和文档网站开发的 development 环境_
 
 - npm run lib
-
   - _使用 babel 编译组件库 到 release/lib 文件夹下 并生成 d.ts, main 字段指向 release/lib/exports.js_
 
 - npm run es
-
   - _tsc 直接编译到 release/es 文件夹下 并生成 d.ts module 字段指向 release/es/exports.js_
 
 - npm run dist
-
   - _webpack 打包 到 release/dist 文件夹下_
 
 - npm run app
-
   - _webpack 打包文档网站_
 
 - **npm run release**
-
   - _发布同时进行 lib es dist app_
 
 - npm run dts:es
-
-- _向 release 的 es 中写入 d.ts_
+  - _向 release 的 es 中写入 d.ts_
 
 - npm run dts:lib
-
-- _向 release 的 lib 中写入 d.ts_
+  - _向 release 的 lib 中写入 d.ts_
 
 - npm run dts
-
   - _向 release 的 es 和 lib 中写入 d.ts_
 
 - npm run scss:watch
-
   - _监听并编译 scss 支持 compass_
 
 - npm run scss
@@ -75,11 +65,11 @@ Options:
 
 ## 2. 注意
 
-1.  预加载处理器使用 scss
-2.  ci 使用 travis
-3.  覆盖率使用 codecov
-4.  测试单元用 jest + enzyme 默认开启 snaptshot
-5.  在.script/config.json 更改一些默认设置
+1. 预加载处理器使用 scss
+2. ci 使用 travis
+3. 覆盖率使用 codecov
+4. 测试单元用 jest + enzyme 默认开启 snaptshot
+5. 在`.script/config.json` 更改一些默认设置
 
 ## 3. 开发状态
 
