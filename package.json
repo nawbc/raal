@@ -23,5 +23,12 @@
 	},
 	"devDependencies": {
 		"identity-obj-proxy": "^3.0.0"
-	}
+	},
+	"repository": "https://github.com/sewerganger/create-muguet-lib",
+	"keywords": [
+		"react",
+		"create-react-app",
+		"ui",
+		"muguet-ui"
+	]
 }
