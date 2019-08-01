@@ -1,6 +1,6 @@
 {
 	"name": "create-muguet-lib",
-	"version": "1.0.0",
+	"version": "0.0.1-alpha2",
 	"description": "create react template that uses for creating react library, document site and dev server",
 	"main": "index.js",
 	"scripts": {},
@@ -10,25 +10,18 @@
 	"keywords": [
 		"react",
 		"template",
-		"create-react-app"
+		"create-react-app",
+		"ui",
+		"muguet-ui"
 	],
 	"author": "HanWang",
 	"license": "MIT",
 	"dependencies": {
-		"babel-eslint": "^10.0.2",
 		"chalk": "^2.4.2",
 		"commander": "^2.20.0",
 		"fs-extra": "7.0.1",
 		"semver": "^6.2.0"
 	},
-	"devDependencies": {
-		"identity-obj-proxy": "^3.0.0"
-	},
-	"repository": "https://github.com/sewerganger/create-muguet-lib",
-	"keywords": [
-		"react",
-		"create-react-app",
-		"ui",
-		"muguet-ui"
-	]
+	"devDependencies": {},
+	"repository": "https://github.com/sewerganger/create-muguet-lib"
 }
