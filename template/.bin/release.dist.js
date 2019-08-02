@@ -33,7 +33,7 @@ measureFileSizesBeforeBuild(rPath.libOutput)
 		return preSize;
 	})
 	.then((preSize) => {
-		console.log('Packing the muguet lib...');
+		console.log('Packing the muguet dist...');
 		let compiler = webpack(config);
 		return new Promise((resolve, reject) => {
 			compiler.run((err, stats) => {
