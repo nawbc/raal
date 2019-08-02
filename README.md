@@ -11,6 +11,8 @@ This is a scaffold for react UI component library development. It has the functi
 
 [中文](https://github.com/sewerganger/create-muguet-lib/blob/master/README-zh.md)
 
+## ❤ recommend using vscode
+
 ## 1.Installation
 
 `npm i create-muguet-lib -g`
@@ -78,13 +80,20 @@ npm install installation dependency
 4. The test unit opens snaptshot by default with jest + enzyme
 5. Change some default settings in `.script/config.json`
 
-## 4. Development status
+## 4. History
+----
+### v0.01-alpha4
+1. remove tslint, using eslint
+2. add `.vscode` and set `"prettier.eslintIntegration": false` because prettier error, details [#672](https://github.com/prettier/prettier-vscode/issues/672)
+----
+
+## 5. Development status
 
 - [x] library packaging
 - [x] Document Web Packing
 - [x] Test Unit
 - [ ] Custom Use Library
 
-## 5. Other
+## 6. Other
 
 If you want to use it only for app development, I copy a lot of create-react-app code.

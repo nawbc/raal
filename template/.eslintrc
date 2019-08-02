@@ -3,33 +3,57 @@
 		"es6": true,
 		"node": true
 	},
-	"extends": "eslint:recommended",
+	"extends": [
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended",
+		"prettier/@typescript-eslint",
+		"prettier/react"
+	],
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly"
+	},
+	"settings": {
+		"react": {
+			"createClass": "createReactClass",
+			"pragma": "React",
+			"version": "detect",
+		}
 	},
 	"parserOptions": {
 		"sourceType": "module",
 		"experimentalObjectRestSpread": true,
 		"jsx": true,
-		"ecmaVersion": 8
+		"ecmaVersion": 2018
 	},
-	"parser": "babel-eslint",
+	"parser": "@typescript-eslint/parser",
 	"rules": {
-		"no-console": "off",
-		"no-inner-declarations": "off",
-		"no-undef": "warn",
-		"no-unused-vars": [
-			"warn",
+		"no-undef": 2,
+		"comma-dangle": [
+			"error",
 			{
-				"vars": "all",
-				"args": "after-used",
-				"ignoreRestSiblings": false
+				"arrays": "never",
+				"objects": "always",
+				"imports": "never",
+				"exports": "never",
+				"functions": "never"
 			}
 		],
-		"semi": [
+		"no-console": [
 			"error",
-			"always"
-		]
+			{
+				"allow": [
+					"log",
+					"error",
+					"info",
+					"warn",
+					"table"
+				]
+			}
+		],
+		"@typescript-eslint/no-non-null-assertion": 0,
+		"@typescript-eslint/no-explicit-any": 0,
+		"react/self-closing-comp": 1,
 	}
 }

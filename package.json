@@ -1,6 +1,6 @@
 {
 	"name": "create-muguet-lib",
-	"version": "0.0.1-alpha3",
+	"version": "0.0.1-alpha5",
 	"description": "create react template that uses for creating react library, document site and dev server",
 	"main": "index.js",
 	"scripts": {},
@@ -22,6 +22,9 @@
 		"fs-extra": "7.0.1",
 		"semver": "^6.2.0"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"@babel/cli": "^7.5.5",
+		"eslint-plugin-react": "^7.14.3"
+	},
 	"repository": "https://github.com/sewerganger/create-muguet-lib"
 }
