@@ -2,7 +2,7 @@
 
 'use strict';
 
-const copyToCurrent = require('./lib/copyToCurrent');
+const copyToCurrent = require('./lib/genProject');
 const chalk = require('chalk');
 const pkg = require('./package.json');
 const semver = require('semver');
