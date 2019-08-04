@@ -1,9 +1,11 @@
 {
 	"name": "create-muguet-lib",
-	"version": "0.0.1-alpha5",
+	"version": "0.0.1-alpha6",
 	"description": "create react template that uses for creating react library, document site and dev server",
 	"main": "index.js",
-	"scripts": {},
+	"scripts": {
+		"cz:init": "commitizen init cz-conventional-changelog --save --save-exact"
+	},
 	"bin": {
 		"create-muguet-lib": "cli.js"
 	},
@@ -24,7 +26,14 @@
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.5.5",
+		"commitizen": "^4.0.3",
+		"cz-conventional-changelog": "^3.0.2",
 		"eslint-plugin-react": "^7.14.3"
 	},
-	"repository": "https://github.com/sewerganger/create-muguet-lib"
+	"repository": "https://github.com/sewerganger/create-muguet-lib",
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
 }
