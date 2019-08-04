@@ -81,6 +81,12 @@ npm install installation dependency
 5. Change some default settings in `.script/config.json`
 
 ## 4. History
+
+----
+### v0.01-alpha6
+1. add husky, lint-staged, changelog, commitizen
+2. remove prettier because of conflict
+3. update .eslintrc
 ----
 ### v0.01-alpha4
 1. remove tslint, using eslint
