@@ -17,7 +17,25 @@
 		"dts:es": "tsc -d --emitDeclarationOnly -p ./include.json --declarationDir ./release/es",
 		"scss:watch": "node-sass lib -o lib -w --importer ./.scripts/utils/compass.js",
 		"scss": "node-sass lib -o lib --importer ./.scripts/utils/compass.js",
+		"eslint": "eslint ./ --ext .ts,.tsx,.js,.jsx --fix",
+		"cz:init": "commitizen init cz-conventional-changelog --save --save-exact",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
 		"test": "jest -u"
+	},
+	"engines": {
+		"npm": "6.10.1",
+		"node": ">=10.12.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"**/*.{jsx,js,tsx,ts}": [
+			"npm run eslint",
+			"git add"
+		]
 	},
 	"dependencies": {
 		"@babel/polyfill": "^7.4.4"
@@ -28,6 +46,7 @@
 		"react-dom": ">=16.6.0"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.5.5",
 		"@babel/core": "7.4.3",
 		"@svgr/webpack": "4.2.0",
 		"@types/jest": "^24.0.16",
@@ -46,22 +65,23 @@
 		"babel-preset-react-app": "^9.0.0",
 		"case-sensitive-paths-webpack-plugin": "2.2.0",
 		"compass-importer": "^0.4.1",
+		"conventional-changelog-cli": "^2.0.23",
 		"cross-env": "^5.2.0",
 		"css-loader": "2.1.1",
+		"cz-conventional-changelog": "^3.0.2",
 		"enzyme": "^3.10.0",
 		"enzyme-adapter-react-16": "^1.14.0",
 		"eslint": "^5.16.0",
-		"eslint-config-prettier": "^6.0.0",
 		"eslint-loader": "^2.2.1",
-		"eslint-plugin-prettier": "^3.1.0",
 		"file-loader": "3.0.1",
 		"html-webpack-plugin": "^4.0.0-beta.8",
+		"husky": "^3.0.2",
 		"identity-obj-proxy": "^3.0.0",
 		"jest": "^24.7.1",
+		"lint-staged": "^9.2.1",
 		"mini-css-extract-plugin": "0.5.0",
 		"node-sass": "^4.12.0",
 		"optimize-css-assets-webpack-plugin": "5.0.1",
-		"prettier": "^1.18.2",
 		"react": "^16.8.6",
 		"react-app-polyfill": "^1.0.1",
 		"react-dev-utils": "^9.0.1",
@@ -79,6 +99,11 @@
 		"webpack-manifest-plugin": "2.0.4",
 		"webpack-progress-bar": "^1.0.6",
 		"workbox-webpack-plugin": "4.2.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	},
 	"license": ""
 }
