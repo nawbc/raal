@@ -3,12 +3,12 @@ import './style/components.css';
 
 export default class Component extends React.Component<any> {
 	state = {
-		switch: false,
+		switch: false
 	};
 
 	componentWillMount() {
-		const b = Promise.resolve(() => {});
-		b.then(() => {});
+		const b = Promise.resolve(() => { });
+		b.then(() => { });
 	}
 	render() {
 		return (
@@ -16,7 +16,7 @@ export default class Component extends React.Component<any> {
 				className="muguet"
 				onClick={() => {
 					this.setState({
-						switch: !this.state.switch,
+						switch: !this.state.switch
 					});
 				}}
 			>
