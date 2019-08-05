@@ -74,6 +74,19 @@ Options:
 - npm run scss
   - _编译 scss_
 
+- npm run test
+  - _使用 `jest + enzyme`,  在项目中随意建立一个`__tests__` 否则运行此命令报错, `Snapshot` 默认使用_
+
+- npm run cz:init
+  - _初始化[commitizen](https://www.npmjs.com/package/commitizen), 它会格式化你的`commit message`, **使用`git cz` 代替 `git commit -m`**,在commit 完后会自动运行eslint [husky](https://www.npmjs.com/package/husky) and [lint-staged](https://www.npmjs.com/package/lint-staged)_
+
+- npm run eslint
+  - _auto fix tsx, ts, js, jsx, but some problems can't be fixed [eslint](https://cn.eslint.org/docs/user-guide/command-line-interface)_
+
+- npm run changelog
+  - 生成 `CHANGELOG.md` [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)_
+
+
 ### 例子
 
 1. create-muguet-lib app (不能含有 react)

@@ -66,6 +66,18 @@ Options:
 - npm run scss
   - _compiles scss_
 
+- npm run test
+  - _test unit, using  `jest + enzyme`,  and you have to build a folder under your project or run an error report, `Snapshot` is opened by default_
+
+- npm run cz:init
+  - _init [commitizen](https://www.npmjs.com/package/commitizen), it will format your `commit message`, **using `git cz` instead `git commit -m`**, and after you commit it will running eslint automatically by [husky](https://www.npmjs.com/package/husky) and [lint-staged](https://www.npmjs.com/package/lint-staged)_
+
+- npm run eslint
+  - _auto fix tsx, ts, js, jsx, but some problems can't be fixed [eslint](https://cn.eslint.org/docs/user-guide/command-line-interface)_
+
+- npm run changelog
+  - _generate `CHANGELOG.md` [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)_
+
 ### Examples
 
 Create-muguet-lib app (cannot contain react)
