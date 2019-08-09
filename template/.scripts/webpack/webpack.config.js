@@ -50,8 +50,6 @@ module.exports = function (env, action) {
 	const isApp = action === 'app';
 	const isLib = action === 'lib';
 	const isReleaseLib = isLib && isProduction;
-	const isReleaseApp = isApp && isProduction;
-	const filterUseless = (e) => e !== false && e !== undefined && e !== null;
 	const publicPath = isProduction ? getServedPath(rPath.packageJson) : isDevelopment && '/';
 	const isRelativeAssetPaths = publicPath === './';
 	const publicUrl = isProduction ? publicPath.slice(0, -1) : isDevelopment && '';
@@ -120,7 +118,7 @@ module.exports = function (env, action) {
 			clear: true,
 			total: 100
 		})
-	].filter(e => filterUseless(e));
+	].filter(Boolean);
 	//======================================================================
 	// app plugin concat lib plugin
 	//======================================================================
@@ -169,7 +167,7 @@ module.exports = function (env, action) {
 				new RegExp('/[^/]+\\.[^/]+$'),
 			],
 		})
-	].concat(libPlugin).filter(e => filterUseless(e));
+	].concat(libPlugin).filter(Boolean);
 
 	//======================================================================
 
@@ -312,17 +310,13 @@ module.exports = function (env, action) {
 					{
 						test: /\.css$/,
 						use: [
-							MiniCssExtractPlugin.loader,
+							isDevelopment && "style-loader",
+							isProduction && { loader: MiniCssExtractPlugin.loader },
 							{
 								loader: "css-loader",
-								options: Object.assign(
-									{
-										sourceMap: isProduction,
-									},
-									isRelativeAssetPaths ? { publicPath: '../../' } : {}
-								)
+								options: { sourceMap: isProduction }
 							}
-						]
+						].filter(Boolean)
 					},
 					{
 						loader: require.resolve('file-loader'),
@@ -364,7 +358,7 @@ module.exports = function (env, action) {
 				isDevelopment &&
 				require.resolve('react-dev-utils/webpackHotDevClient'),
 				enPath.entry
-			].filter(e => filterUseless(e)),
+			].filter(Boolean),
 		output: output,
 		mode: env && 'development',
 		devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
