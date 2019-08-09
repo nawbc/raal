@@ -33,7 +33,7 @@
 	},
 	"parser": "@typescript-eslint/parser",
 	"rules": {
-		"no-undef": 1,
+		"no-undef": "error",
 		"semi": "error",
 		"no-multi-spaces": [
 			"error",
@@ -45,8 +45,8 @@
 			"error",
 			{
 				"arrays": "never",
-				"objects": "never",
-				"imports": "always",
+				"objects": "always",
+				"imports": "never",
 				"exports": "never",
 				"functions": "never"
 			}
