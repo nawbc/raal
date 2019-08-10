@@ -12,7 +12,7 @@ const theUrl = url.format({
 
 jest.setTimeout(30000)
 
-describe('muguet test', () => {
+describe('raal test', () => {
 	beforeAll(async () => {
 		await page.goto(theUrl);
 	});

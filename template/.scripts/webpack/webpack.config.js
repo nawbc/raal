@@ -351,7 +351,7 @@ module.exports = function (env, action) {
 		{
 			path: enPath.output,
 			filename: isReleaseLib ?
-				'muguet.js' : (
+				'raal.js' : (
 					isProduction && isApp ?
 						'static/js/[name].[contenthash:8].js' :
 						'static/js/bundle.js'

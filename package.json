@@ -1,6 +1,6 @@
 {
 	"name": "raal",
-	"version": "0.0.2-alpha1",
+	"version": "0.0.2-alpha2",
 	"description": "build react application and library",
 	"scripts": {
 		"cz:init": "commitizen init cz-conventional-changelog --save --save-exact"
@@ -13,14 +13,14 @@
 		"template",
 		"create-react-app",
 		"ui",
-		"muguet-ui"
+		"raal"
 	],
 	"author": "HanWang",
 	"license": "MIT",
 	"dependencies": {
 		"chalk": "^2.4.2",
 		"commander": "^2.20.0",
-		"fs-extra": "7.0.1",
+		"fs-extra": "^7.0.1",
 		"semver": "^6.2.0"
 	},
 	"devDependencies": {

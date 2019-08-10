@@ -1,4 +1,4 @@
-const isWebpack = (process.env.MUGUET_ENV === 'webpack') ? true : false;
+const isWebpack = (process.env.RAAL_ENV === 'webpack') ? true : false;
 
 const transformRenameImport = [
 	"transform-rename-import",
@@ -51,7 +51,7 @@ const plugins = [
 	[
 		"import",
 		{
-			"libraryName": "muguet",
+			"libraryName": "raal",
 		}
 	],
 	!isWebpack && transformRenameImport

@@ -2,7 +2,7 @@
 
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
-process.env.MUGUET_ENV = 'webpack';
+process.env.RAAL_ENV = 'webpack';
 
 const fs = require('fs-extra');
 const webpack = require('webpack');
@@ -37,7 +37,7 @@ measureFileSizesBeforeBuild(rPath.appOutput)
 		return preSize;
 	})
 	.then((preSize) => {
-		console.log(chalk.green('Packing the muguet app...'));
+		console.log(chalk.green('Packing the raal app...'));
 		let compiler = webpack(config);
 		return new Promise((resolve, reject) => {
 			compiler.run((err, stats) => {

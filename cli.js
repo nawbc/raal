@@ -2,7 +2,7 @@
 
 'use strict';
 
-const copyToCurrent = require('./lib/genProject');
+const genProject = require('./lib/genProject');
 const chalk = require('chalk');
 const pkg = require('./package.json');
 const semver = require('semver');
@@ -38,5 +38,5 @@ if (program.args.indexOf('react') > -1 || program.args.indexOf('react-dom') > -1
 	const currentPath = process.cwd();
 	const argv = program.args;
 	const srcPath = __dirname;
-	copyToCurrent({ currentPath, argv, srcPath, program });
+	genProject({ currentPath, argv, srcPath, program });
 }

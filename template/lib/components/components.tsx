@@ -13,7 +13,7 @@ export default class Component extends React.Component<any> {
 	render() {
 		return (
 			<div
-				className="muguet"
+				className="raal"
 			>
 				<div
 					className='test test-click'

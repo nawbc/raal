@@ -2,7 +2,11 @@
 
 process.env.NODE_ENV = 'development';
 process.env.BABEL_ENV = 'development';
+<<<<<<< HEAD
 process.env.MUGUET_ENV = 'webpack';
+=======
+process.env.RAAL_ENV = 'webpack';
+>>>>>>> fix webpack can't use compass, add sourcemap for css when babel
 
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
@@ -83,7 +87,7 @@ choosePort(finalHost, DEFAULT_PORT).then(port => {
 		if (process.stdout.isTTY) {
 			clearConsole();
 		}
-		console.log(chalk.green(`Muguet development server runing on ${finalHost}:${port} ...\n`));
+		console.log(chalk.green(`Raal development server runing on ${finalHost}:${port} ...\n`));
 		openBrowser(urls.localUrlForBrowser);
 	})
 })

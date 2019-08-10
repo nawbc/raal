@@ -16,8 +16,8 @@
 		"libOutput": "./release/dist"
 	},
 	"names": {
-		"packJsName": "muguet.js",
-		"packCssName": "muguet.css",
-		"library": "muguet"
+		"packJsName": "raal.js",
+		"packCssName": "raal.css",
+		"library": "raal"
 	}
 }

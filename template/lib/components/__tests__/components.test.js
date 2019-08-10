@@ -6,12 +6,12 @@ import Components from '../components';
 
 describe('A suite', function () {
 
-	it('should be selectable by class "muguet"', function () {
-		expect(shallow(<Components />).is('.muguet')).toBe(true);
+	it('should be selectable by class "raal"', function () {
+		expect(shallow(<Components />).is('.raal')).toBe(true);
 	});
 
 	it('should mount in a full DOM', function () {
-		expect(mount(<Components />).find('.muguet').length).toBe(1);
+		expect(mount(<Components />).find('.raal').length).toBe(1);
 	});
 
 	it('Snapshot', () => {

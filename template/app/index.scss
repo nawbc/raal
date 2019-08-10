@@ -10,7 +10,7 @@ body {
   padding: 0px;
   margin: 0px;
 }
-.muguet-container {
+.raal-container {
   .animationWrapper {
     position: absolute;
     @include center(525px, 470px);
@@ -35,7 +35,7 @@ body {
       }
     }
 
-    .muguet-left-leaf {
+    .raal-left-leaf {
       width: 170px;
       height: 400px;
       background: url("./assets/left-leaf.svg");
@@ -45,7 +45,7 @@ body {
       }
     }
 
-    .muguet-right-leaf {
+    .raal-right-leaf {
       position: absolute;
       left: 71px;
       bottom: 81px;
@@ -62,7 +62,7 @@ body {
       }
     }
 
-    .muguet-branch-leaf {
+    .raal-branch-leaf {
       animation: branch 3s linear infinite;
       transform: rotate(0deg);
       transform-origin: 0 100%;

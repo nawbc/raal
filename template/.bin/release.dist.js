@@ -2,7 +2,11 @@
 
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
+<<<<<<< HEAD
 process.env.MUGUET_ENV = 'webpack';
+=======
+process.env.RAAL_ENV = 'webpack';
+>>>>>>> fix webpack can't use compass, add sourcemap for css when babel
 
 const fs = require('fs-extra');
 const webpack = require('webpack');
@@ -33,7 +37,7 @@ measureFileSizesBeforeBuild(rPath.libOutput)
 		return preSize;
 	})
 	.then((preSize) => {
-		console.log('Packing the muguet dist...');
+		console.log('Packing the raal dist...');
 		let compiler = webpack(config);
 		return new Promise((resolve, reject) => {
 			compiler.run((err, stats) => {
