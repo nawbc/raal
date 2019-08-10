@@ -1,8 +1,7 @@
 {
 	"name": "create-muguet-lib",
-	"version": "0.0.1-alpha8",
+	"version": "0.0.1-alpha10",
 	"description": "create react template that uses for creating react library, document site and dev server",
-	"main": "index.js",
 	"scripts": {
 		"cz:init": "commitizen init cz-conventional-changelog --save --save-exact"
 	},
