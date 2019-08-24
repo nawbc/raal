@@ -5,7 +5,6 @@
 		"esModuleInterop": true,
 		"noImplicitThis": true,
 		"noEmitOnError": true,
-		"isolatedModules": true,
 		"noUnusedParameters": false,
 		"noUnusedLocals": false,
 		"baseUrl": "./",
