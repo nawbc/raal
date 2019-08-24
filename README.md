@@ -96,6 +96,7 @@ npm install installation dependency
 
 
 ----
+### v0.02-alpha1
 1. 去除scss:watch 字段
 2. 添加 `babel-plugin-transform-rename-import` 在生产环境 import 的.scss 转化为.css
 3. 更改.babelrc 为 .babelrc.js
