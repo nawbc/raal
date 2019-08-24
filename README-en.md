@@ -9,7 +9,7 @@
 
 This is a scaffold for react UI component library development. It has the functions of document website development and UI component development.
 
-[中文](https://github.com/sewerganger/create-muguet-lib/blob/master/README-zh.md)
+[中文](https://github.com/sewerganger/create-muguet-lib/blob/master/README.md)
 
 ## ❤ recommend using vscode
 
