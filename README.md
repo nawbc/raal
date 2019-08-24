@@ -10,7 +10,7 @@
 
 这是一个用于 react ui 组件库开发的脚手架, 具有文档网站开发,ui 组件开发的功能
 
-[English](https://github.com/sewerganger/create-muguet-lib/blob/master/README.md)
+[English](https://github.com/sewerganger/create-muguet-lib/blob/master/README-en.md)
 
 ## ❤ 推荐使用 vscode
 
