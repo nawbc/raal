@@ -111,7 +111,7 @@ Options:
 3. 更新.eslintrc
 ----
 ### v0.01-alpha4
-1. 删除tslint, 使用 ![eslint](https://eslint.org/blog/2019/01/future-typescript-eslint#linting)
+1. 删除tslint, 使用 [eslint](https://eslint.org/blog/2019/01/future-typescript-eslint#linting)
 2. add `.vscode` and set `"prettier.eslintIntegration": false` because prettier error, details [#672](https://github.com/prettier/prettier-vscode/issues/672)
 ----
 
