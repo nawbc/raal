@@ -1,16 +1,6 @@
 {
 	"eslint.autoFixOnSave": true,
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		{
-			"language": "typescript",
-			"autoFix": true
-		}
-	],
-	"[javascriptreact]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features"
-	},
+	"eslint.enable": true,
 	"cSpell.enabledLanguageIds": [
 		"asciidoc",
 		"c",

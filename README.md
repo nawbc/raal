@@ -40,7 +40,7 @@ Options:
   - _Use Babel to compile component libraries into release/lib folder and generate d.ts. The main field points to release/lib/exports.js_
 
 - npm run es
-  - _tsc is compiled directly into the release/es folder and the d.ts module field is generated to point to release/es/exports..js_
+  - _tsc is compiled directly into the release/es folder and the d.ts module field is generated to point to release/es/exports.js_
 
 - npm run dist
   - _webpack package to release/dist folder_
@@ -94,6 +94,11 @@ npm install installation dependency
 
 ## 4. History
 
+
+----
+1. 去除scss:watch 字段
+2. 添加 `babel-plugin-transform-rename-import` 在生产环境 import 的.scss 转化为.css
+3. 更改.babelrc 为 .babelrc.js
 ----
 ### v0.01-alpha6
 1. add husky, lint-staged, changelog, commitizen

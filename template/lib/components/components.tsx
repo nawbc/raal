@@ -1,9 +1,9 @@
 import * as React from 'react';
-import './style/components.css';
+import './style/components.scss';
 
 export default class Component extends React.Component<any> {
 	state = {
-		switch: false
+		switch: false,
 	};
 
 	componentWillMount() {
@@ -16,7 +16,7 @@ export default class Component extends React.Component<any> {
 				className="muguet"
 				onClick={() => {
 					this.setState({
-						switch: !this.state.switch
+						switch: !this.state.switch,
 					});
 				}}
 			>

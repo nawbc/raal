@@ -51,7 +51,6 @@ module.exports = function (env, action) {
 	const isLib = action === 'lib';
 	const isReleaseLib = isLib && isProduction;
 	const publicPath = isProduction ? getServedPath(rPath.packageJson) : isDevelopment && '/';
-	const isRelativeAssetPaths = publicPath === './';
 	const publicUrl = isProduction ? publicPath.slice(0, -1) : isDevelopment && '';
 	let enPath = null;
 
@@ -98,8 +97,6 @@ module.exports = function (env, action) {
 				'!**/*.json',
 				'!**/__tests__/**',
 				'!**/?(*.)(spec|test).*',
-				'!**/src/setupProxy.*',
-				'!**/src/setupTests.*',
 			],
 			watch: rPath.appSrc,
 			silent: true,
