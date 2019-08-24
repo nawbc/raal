@@ -1,4 +1,5 @@
 # create-muguet-lib
+
 ![](https://travis-ci.com/sewerganger/create-muguet-lib.svg?branch=master)
 ![](https://img.shields.io/github/languages/top/sewerganger/create-muguet-lib)
 ![](https://img.shields.io/github/package-json/v/sewerganger/create-muguet-lib/master)
@@ -7,94 +8,97 @@
 
 <img src="https://raw.githubusercontent.com/sewerganger/create-muguet-lib/master/doc/logo.jpg" width="100px"/>
 
-This is a scaffold for react UI component library development. It has the functions of document website development and UI component development.
+这是一个用于 react ui 组件库开发的脚手架, 具有文档网站开发,ui 组件开发的功能
 
-[中文](https://github.com/sewerganger/create-muguet-lib/blob/master/README-zh.md)
+[English](https://github.com/sewerganger/create-muguet-lib/blob/master/README.md)
 
-## ❤ recommend using vscode
+## ❤ 推荐使用 vscode
 
-## 1.Installation
+## 1. 安装
 
 `npm i create-muguet-lib -g`
 
-## 2. Usage
+## 2. 使用方法
 
-### Global commands
+### 全局命令
 
 ```shell
 Usage: cli [options]
 Options:
-  - v, --version output the version number
-  - a, --author <name> add Author
-  - l, --license <name> add License
-  - h, --help output usage information
+  -v, --version          output the version number
+  -a,  --author <name>   add Author
+  -l,  --license <name>  add License
+  -h, --help             output usage information
 ```
 
-### Commands in Templates
+### 模板中的命令
 
 - npm start
 
-  - _Open Document Development Environment to Provide Development Environment for Component Development and Document Website Development_
+  - _打开文档开发环境，提供组件开发和文档网站开发的 development 环境_
 
 - npm run lib
-  - _Use Babel to compile component libraries into release/lib folder and generate d.ts. The main field points to release/lib/exports.js_
+
+  - _使用 babel 编译组件库 到 release/lib 文件夹下 并生成 d.ts, main 字段指向 release/lib/exports.js_
 
 - npm run es
-  - _tsc is compiled directly into the release/es folder and the d.ts module field is generated to point to release/es/exports.js_
+
+  - _tsc 直接编译到 release/es 文件夹下 并生成 d.ts module 字段指向 release/es/exports.js_
 
 - npm run dist
-  - _webpack package to release/dist folder_
+
+  - _webpack 打包 到 release/dist 文件夹下_
 
 - npm run app
-  - _webpack packaged document website_
+
+  - _webpack 打包文档网站_
 
 - **npm run release**
-  - _running lib, es, dist, app_
+
+  - _发布同时进行 lib es dist app_
 
 - npm run dts:es
-  - _Write d.ts to releases_
+
+  - _向 release 的 es 中写入 d.ts_
 
 - npm run dts:lib
-  - _Write d.ts to release Lib_
+
+  - _向 release 的 lib 中写入 d.ts_
 
 - npm run dts
-  - _writes d.ts to release_
 
-- npm run scss:watch
-  - _listens and compiles (**support compass**)_
+  - _向 release 的 es 和 lib 中写入 d.ts_
 
 - npm run scss
-  - _compiles scss_
+  - _编译 scss_
 
 - npm run test
-  - _test unit, using  `jest + enzyme`,  and you have to build a folder under your project or run an error report, `Snapshot` is opened by default_
+  - _使用 `jest + enzyme`,  在项目中随意建立一个`__tests__` 否则运行此命令报错, `Snapshot` 默认使用_
 
 - npm run cz:init
-  - _init [commitizen](https://www.npmjs.com/package/commitizen), it will format your `commit message`, **using `git cz` instead `git commit -m`**, and after you commit it will running eslint automatically by [husky](https://www.npmjs.com/package/husky) and [lint-staged](https://www.npmjs.com/package/lint-staged)_
+  - _初始化[commitizen](https://www.npmjs.com/package/commitizen), 它会格式化你的`commit message`, **使用`git cz` 代替 `git commit -m`**,在commit 完后会自动运行eslint [husky](https://www.npmjs.com/package/husky) and [lint-staged](https://www.npmjs.com/package/lint-staged)_
 
 - npm run eslint
   - _auto fix tsx, ts, js, jsx, but some problems can't be fixed [eslint](https://cn.eslint.org/docs/user-guide/command-line-interface)_
 
 - npm run changelog
-  - _generate `CHANGELOG.md` [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)_
-
-### Examples
-
-Create-muguet-lib app (cannot contain react)
-
-npm install installation dependency
-
-## 3. Attention
-
-1. Preload processors use scss
-2. CI uses Travis
-3. Coverage using codecov
-4. The test unit opens snaptshot by default with jest + enzyme
-5. Change some default settings in `.script/config.json`
-
-## 4. History
+  - _生成 `CHANGELOG.md` [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)_
 
 
+### 例子
+
+1. create-muguet-lib app (不能含有 react)
+2. npm install 安装依赖
+
+## 3. 注意
+
+1. 预加载处理器使用 scss
+2. ci 使用 travis
+3. 覆盖率使用 codecov
+4. 测试单元用 jest + enzyme 默认开启 snaptshot
+5. 在`.script/config.json` 更改一些默认设置
+
+## 4.历史
 ----
 ### v0.02-alpha1
 1. 去除scss:watch 字段
@@ -102,22 +106,16 @@ npm install installation dependency
 3. 更改.babelrc 为 .babelrc.js
 ----
 ### v0.01-alpha6
-1. add husky, lint-staged, changelog, commitizen
-2. remove prettier because of conflict
-3. update .eslintrc
+1. 添加Husky、Lint Staged、ChangeLog和Commitien
+2. 移除prettier 开启vscode自动保存格式化, 会和eslint冲突
+3. 更新.eslintrc
 ----
 ### v0.01-alpha4
-1. remove tslint, using eslint
+1. 删除tslint, 使用 ![eslint](https://eslint.org/blog/2019/01/future-typescript-eslint#linting)
 2. add `.vscode` and set `"prettier.eslintIntegration": false` because prettier error, details [#672](https://github.com/prettier/prettier-vscode/issues/672)
 ----
 
-## 5. Development status
 
-- [x] library packaging
-- [x] Document Web Packing
-- [x] Test Unit
-- [ ] Custom Use Library
+## 5. 其他
 
-## 6. Other
-
-If you want to use it only for app development, I copy a lot of create-react-app code.
+如果你想只用于 app 开发也行 毕竟我 copy 了很多 create-react-app 的代码 🤭🤭
