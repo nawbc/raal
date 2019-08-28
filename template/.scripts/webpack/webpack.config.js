@@ -18,6 +18,7 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const { names, rootPath, constPaths, publicExtUrl } = configJson;
 const WebpackProgressBar = require('webpack-progress-bar')
+const compassImporter = require('../utils/compass');
 
 const rPath = resolveJsonPath(rootPath, constPaths);
 const isTs = fs.existsSync(rPath.tsConfig);
