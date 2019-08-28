@@ -6,7 +6,6 @@ const transformRenameImport = [
 	}
 ];
 
-
 const presets = [
 	[
 		"@babel/preset-env",
@@ -56,8 +55,5 @@ const plugins = [
 	],
 	process.env.NODE_ENV === 'production' && transformRenameImport
 ].filter(Boolean);
-
-
-
 
 module.exports = { presets, plugins };

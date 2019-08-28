@@ -300,7 +300,11 @@ module.exports = function (env, action) {
 								loader: "css-loader"
 							},
 							{
-								loader: "sass-loader"
+								loader: "sass-loader",
+								options: {
+									importer: compassImporter,
+									sourceMap: isProduction
+								}
 							}
 						]
 					},
