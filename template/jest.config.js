@@ -6,6 +6,12 @@ module.exports = {
 
 	coverageDirectory: "coverage",
 
+	collectCoverageFrom: [
+		"**/*.{js,jsx,ts,tsx}",
+		"!**/node_modules/**",
+		"!**/vendor/**"
+	],
+
 	moduleFileExtensions: [
 		"js",
 		"json",

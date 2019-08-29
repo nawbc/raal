@@ -1,122 +1,122 @@
 @mixin center($width, $height) {
-	left: 50%;
-	top: 50%;
-	margin-left: -$width/2;
-	margin-top: -$height/2;
+  left: 50%;
+  top: 50%;
+  margin-left: -$width/2;
+  margin-top: -$height/2;
 }
 
 html,
 body {
-	padding: 0px;
-	margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 .muguet-container {
-	// h1 {
-	// 	height: 70px;
-	// 	margin: 0px;
-	// 	text-align: center;
-	// 	line-height: 70px;
-	// 	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-	// }
-	.animationWrapper {
-		position: absolute;
-		@include center(525px, 470px);
-		width: 525px;
-		height: 470px;
-		box-shadow: 3px 3px 15px #d8d8d8;
-		border-radius: 20px;
+  // h1 {
+  // 	height: 70px;
+  // 	margin: 0px;
+  // 	text-align: center;
+  // 	line-height: 70px;
+  // 	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  // }
+  .animationWrapper {
+    position: absolute;
+    @include center(525px, 470px);
+    width: 525px;
+    height: 470px;
+    box-shadow: 3px 3px 15px #d8d8d8;
+    border-radius: 20px;
 
-		h1 {
-			border-radius: 0px 0px 20px 20px;
-			height: 70px;
-			margin: 0px;
-			font-size: 40px;
-			text-align: center;
-			line-height: 70px;
-			background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-			color: #008a12;
-			@media only screen and (max-width: 768px) {
-				font-size: 30px;
-			}
-		}
+    h1 {
+      border-radius: 0px 0px 20px 20px;
+      height: 70px;
+      margin: 0px;
+      font-size: 40px;
+      text-align: center;
+      line-height: 70px;
+      background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+      color: #008a12;
+      @media only screen and (max-width: 768px) {
+        font-size: 30px;
+      }
+    }
 
-		.muguet-left-leaf {
-			width: 170px;
-			height: 400px;
-			background: url('./assets/left-leaf.svg');
-			@media only screen and (max-width: 768px) {
-				width: 105px;
-				height: 230px;
-			}
-		}
+    .muguet-left-leaf {
+      width: 170px;
+      height: 400px;
+      background: url("./assets/left-leaf.svg");
+      @media only screen and (max-width: 768px) {
+        width: 105px;
+        height: 230px;
+      }
+    }
 
-		.muguet-right-leaf {
-			position: absolute;
-			left: 71px;
-			bottom: 81px;
-			animation: rightLeaf 2s linear infinite;
-			z-index: 10;
-			width: 80px;
-			height: 195px;
-			background: url('./assets/right-leaf.svg');
-			@media only screen and (max-width: 768px) {
-				width: 53px;
-				height: 136px;
-				left: 36px;
-				bottom: 75px;
-			}
-		}
+    .muguet-right-leaf {
+      position: absolute;
+      left: 71px;
+      bottom: 81px;
+      animation: rightLeaf 2s linear infinite;
+      z-index: 10;
+      width: 80px;
+      height: 195px;
+      background: url("./assets/right-leaf.svg");
+      @media only screen and (max-width: 768px) {
+        width: 53px;
+        height: 136px;
+        left: 36px;
+        bottom: 75px;
+      }
+    }
 
-		.muguet-branch-leaf {
-			animation: branch 3s linear infinite;
-			transform: rotate(0deg);
-			transform-origin: 0 100%;
-			position: absolute;
-			width: 400px;
-			height: 255px;
-			left: 78px;
-			top: 27px;
-			background: url('./assets/branch.svg');
+    .muguet-branch-leaf {
+      animation: branch 3s linear infinite;
+      transform: rotate(0deg);
+      transform-origin: 0 100%;
+      position: absolute;
+      width: 400px;
+      height: 255px;
+      left: 78px;
+      top: 27px;
+      background: url("./assets/branch.svg");
 
-			@media only screen and (max-width: 768px) {
-				width: 240px;
-				height: 145px;
-				left: 42px;
-				top: 8px;
-			}
-		}
+      @media only screen and (max-width: 768px) {
+        width: 240px;
+        height: 145px;
+        left: 42px;
+        top: 8px;
+      }
+    }
 
-		.common {
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-		@media only screen and (max-width: 768px) {
-			width: 300px;
-			height: 300px;
-			@include center(300px, 300px);
-		}
-	}
+    .common {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 300px;
+      height: 300px;
+      @include center(300px, 300px);
+    }
+  }
 
-	@keyframes rightLeaf {
-		0% {
-			transform: rotate(-6deg);
-		}
-		50% {
-			transform: rotate(-13deg);
-		}
-		100% {
-			transform: rotate(-6deg);
-		}
-	}
-	@keyframes branch {
-		0% {
-			transform: rotate(0deg);
-		}
-		50% {
-			transform: rotate(-3deg);
-		}
-		100% {
-			transform: rotate(0deg);
-		}
-	}
+  @keyframes rightLeaf {
+    0% {
+      transform: rotate(-6deg);
+    }
+    50% {
+      transform: rotate(-13deg);
+    }
+    100% {
+      transform: rotate(-6deg);
+    }
+  }
+  @keyframes branch {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-3deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 }

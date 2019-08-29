@@ -1,10 +1,12 @@
+const isWebpack = (process.env.MUGUET_ENV === 'webpack') ? true : false;
+
 const transformRenameImport = [
 	"transform-rename-import",
 	{
 		"original": "^(.+?)\\.scss$",
 		"replacement": "$1.css"
 	}
-];
+]
 
 const presets = [
 	[
@@ -50,10 +52,13 @@ const plugins = [
 		"import",
 		{
 			"libraryName": "muguet",
-			"style": true
 		}
 	],
-	process.env.NODE_ENV === 'production' && transformRenameImport
+	!isWebpack && transformRenameImport
 ].filter(Boolean);
 
-module.exports = { presets, plugins };
+const otherOptions = {
+	comments: false
+}
+
+module.exports = { presets, plugins, ...otherOptions };

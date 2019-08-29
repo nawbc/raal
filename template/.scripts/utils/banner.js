@@ -1,6 +1,7 @@
 const pkg = require('../../package.json');
 const banner = `
-									Name: ${pkg.name} version: ${pkg.version}
+									Name: ${pkg.name}
 											Author:  ${pkg.author}
-											LICENSE ${pkg.license}`;
+											version: ${pkg.version}
+										LICENSE ${pkg.license}`;
 module.exports = banner;

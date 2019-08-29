@@ -2,8 +2,8 @@
 
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
+process.env.MUGUET_ENV = 'webpack';
 
-const path = require('path');
 const fs = require('fs-extra');
 const webpack = require('webpack');
 const chalk = require('react-dev-utils/chalk');

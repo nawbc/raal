@@ -100,6 +100,13 @@ Options:
 
 ## 4.历史
 ----
+### v0.10-beta
+
+----
+### v0.02-alpha2
+1. 修复 webpack 无法导入compass
+2. `注意` import 时不要加.scss 拓展名 否则webpack无法打包
+----
 ### v0.02-alpha1
 1. 去除scss:watch 字段
 2. 添加 `babel-plugin-transform-rename-import` 在生产环境 import 的.scss 转化为.css

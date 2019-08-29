@@ -1,6 +1,9 @@
 'use strict';
+
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
+process.env.MUGUET_ENV = 'webpack';
+
 
 const fs = require('fs-extra');
 const webpack = require('webpack');

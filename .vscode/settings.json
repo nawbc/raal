@@ -46,6 +46,7 @@
 		"wlan"
 	],
 	"cSpell.ignoreWords": [
-		"codecov"
+		"codecov",
+		"corejs"
 	],
 }

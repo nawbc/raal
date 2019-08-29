@@ -16,6 +16,7 @@
 		"resolveJsonModule": true,
 		"target": "es5",
 		"outDir": "release/es",
+		"sourceMap": true,
 		"lib": [
 			"dom",
 			"es7",

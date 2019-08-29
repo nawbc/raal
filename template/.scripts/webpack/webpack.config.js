@@ -18,10 +18,19 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const { names, rootPath, constPaths, publicExtUrl } = configJson;
 const WebpackProgressBar = require('webpack-progress-bar')
+// 暴露 compass-importer
 const compassImporter = require('../utils/compass');
+const os = require('os');
 
 const rPath = resolveJsonPath(rootPath, constPaths);
 const isTs = fs.existsSync(rPath.tsConfig);
+const workers = os.cpus().length;
+const workerLoader = {
+	loader: "thread-loader",
+	options: {
+		workers: workers,
+	}
+}
 
 //======================================================================
 // come from create-react-app to get the public path
@@ -50,6 +59,7 @@ module.exports = function (env, action) {
 	const isProduction = env === 'production';
 	const isApp = action === 'app';
 	const isLib = action === 'lib';
+	// 发布包
 	const isReleaseLib = isLib && isProduction;
 	const publicPath = isProduction ? getServedPath(rPath.packageJson) : isDevelopment && '/';
 	const publicUrl = isProduction ? publicPath.slice(0, -1) : isDevelopment && '';
@@ -77,7 +87,7 @@ module.exports = function (env, action) {
 		isProduction && new MiniCssExtractPlugin(
 			Object.assign(
 				{
-					filename: isLib ? 'muguet.css' : 'static/css/[name].css',
+					filename: isLib ? names.packCssName : 'static/css/[name].css',
 				},
 				isLib ?
 					{} : {
@@ -150,14 +160,14 @@ module.exports = function (env, action) {
 		isDevelopment && new webpack.HotModuleReplacementPlugin(),
 		isDevelopment && new CaseSensitivePathsPlugin(),
 		new ManifestPlugin({
-			fileName: '_manifest.json',
+			fileName: 'manifest.json',
 			publicPath: rPath.appPublic,
 		}),
 		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 		isProduction &&
 		new WorkboxWebpackPlugin.GenerateSW({
 			clientsClaim: true,
-			exclude: [/\.map$/, /_manifest\.json$/],
+			exclude: [/\.map$/, /manifest\.json$/],
 			importWorkboxFrom: 'cdn',
 			navigateFallback: rPath.appHtml,
 			navigateFallbackBlacklist: [
@@ -224,7 +234,7 @@ module.exports = function (env, action) {
 		strictExportPresence: true,
 		rules: [
 			{
-				test: /\.(js|mjs|jsx)$/,
+				test: /\.(js|jsx)$/,
 				enforce: 'pre',
 				use: [
 					{
@@ -249,32 +259,37 @@ module.exports = function (env, action) {
 					},
 
 					{
-						test: /\.(js|mjs|jsx|ts|tsx)$/,
+						test: /\.(js|jsx|ts|tsx)$/,
 						include: [rPath.appSrc, rPath.libSrc],
-						loader: require.resolve('babel-loader'),
-						options: {
-							customize: require.resolve(
-								'babel-preset-react-app/webpack-overrides'
-							),
-							plugins: [
-								[
-									require.resolve('babel-plugin-named-asset-import'),
-									{
-										loaderMap: {
-											svg: {
-												ReactComponent: '@svgr/webpack?-svgo,+ref![path]',
+						use: [
+							{
+								loader: 'babel-loader',
+								options: {
+									customize: require.resolve(
+										'babel-preset-react-app/webpack-overrides'
+									),
+									plugins: [
+										[
+											require.resolve('babel-plugin-named-asset-import'),
+											{
+												loaderMap: {
+													svg: {
+														ReactComponent: '@svgr/webpack?-svgo,+ref![path]',
+													},
+												},
 											},
-										},
-									},
-								],
-							],
-							cacheDirectory: true,
-							cacheCompression: isProduction,
-							compact: isProduction,
-						},
+										],
+									],
+									cacheDirectory: true,
+									cacheCompression: isProduction,
+									compact: isProduction,
+								},
+							},
+							workerLoader
+						]
 					},
 					{
-						test: /\.(js|mjs)$/,
+						test: /\.js$/,
 						exclude: /@babel(?:\/|\\{1,2})runtime/,
 						loader: require.resolve('babel-loader'),
 						options: {
@@ -292,37 +307,36 @@ module.exports = function (env, action) {
 						},
 					},
 					{
-						test: /\.s(c|a)ss$/,
+						test: /\.(sa|sc|c)ss$/,
 						use: [
-							{
-								loader: "style-loader"
+							isDevelopment && "style-loader",
+							isProduction && {
+								loader: MiniCssExtractPlugin.loader,
+								options: {
+									hmr: isDevelopment
+								}
 							},
 							{
-								loader: "css-loader"
+								loader: "css-loader",
+								options: {
+									sourceMap: isProduction,
+									importLoaders: 1
+								}
 							},
 							{
 								loader: "sass-loader",
 								options: {
 									importer: compassImporter,
-									sourceMap: isProduction
+									sourceMap: isProduction,
+									importLoaders: 2,
 								}
-							}
-						]
-					},
-					{
-						test: /\.css$/,
-						use: [
-							isDevelopment && "style-loader",
-							isProduction && { loader: MiniCssExtractPlugin.loader },
-							{
-								loader: "css-loader",
-								options: { sourceMap: isProduction }
-							}
+							},
+							workerLoader
 						].filter(Boolean)
 					},
 					{
 						loader: require.resolve('file-loader'),
-						exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.htm?(.|l)$/, /\.json$/],
+						exclude: [/\.(js|jsx|ts|tsx)$/, /\.htm?(.|l)$/, /\.json$/],
 						options: {
 							name: 'static/source/[name].[ext]',
 						},
@@ -367,7 +381,7 @@ module.exports = function (env, action) {
 		optimization: optimization,
 		module: modules,
 		resolve: {
-			extensions: [".js", ".json", ".jsx", ".tsx", ".ts", ".json", ".css", ".scss"]
+			extensions: [".js", ".json", ".jsx", ".tsx", ".ts", ".json", ".css", ".scss", ".sass"]
 		},
 		plugins: (isLib && isProduction) ? libPlugin : appPlugin,
 		node: {

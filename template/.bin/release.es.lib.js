@@ -1,8 +1,7 @@
+'use strict'
+
 const { exec } = require('child_process');
 const chalk = require('react-dev-utils/chalk');
-const path = require('path');
-const copy = require('recursive-copy');
-
 const args = process.argv.slice(2)[0]
 const isLib = args === 'lib';
 
@@ -24,8 +23,9 @@ const generateDts = () => new Promise((resolve, reject) => {
 })
 
 const compileScss = () => new Promise((resolve) => {
-	console.log('start compile scss.....')
-	exec('npm run scss', (err, stdout, stderr) => {
+	const which = isLib ? ':lib' : ':es';
+	console.log('start compile scss' + which + ' .....');
+	exec('npm run scss' + which, (err, stdout, stderr) => {
 		resolve(err ? stderr : 'Scss has been compiled successfully');
 	})
 })
