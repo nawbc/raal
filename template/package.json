@@ -20,7 +20,10 @@
 		"eslint": "eslint ./ --ext .ts,.tsx,.js,.jsx --fix",
 		"cz:init": "commitizen init cz-conventional-changelog --save --save-exact",
 		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-		"test": "jest -u"
+		"test": "npm run test:unit && npm run test:e2e",
+		"test:unit": "jest -u",
+		"test:e2e": "jest --config ./jest.e2e.js",
+		"test:ci": "cross-env CI=true npm run test"
 	},
 	"engines": {
 		"npm": "6.10.1",
@@ -81,10 +84,13 @@
 		"husky": "^3.0.2",
 		"identity-obj-proxy": "^3.0.0",
 		"jest": "^24.7.1",
+		"jest-image-snapshot": "^2.10.0",
+		"jest-puppeteer": "^4.3.0",
 		"lint-staged": "^9.2.1",
 		"mini-css-extract-plugin": "0.5.0",
 		"node-sass": "^4.12.0",
 		"optimize-css-assets-webpack-plugin": "5.0.1",
+		"puppeteer": "^1.19.0",
 		"react-dev-utils": "^9.0.1",
 		"react-test-renderer": "^16.8.6",
 		"resolve": "^1.11.1",

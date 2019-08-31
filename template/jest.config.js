@@ -1,4 +1,4 @@
-const JestExcludeSrc = require('./.scripts/utils/jest-exclude-src');
+const JestExcludeSrc = require('./.scripts/jest/jest-exclude-src');
 
 module.exports = {
 
@@ -32,20 +32,15 @@ module.exports = {
 		"<rootDir>"
 	],
 
-	setupFilesAfterEnv: ["<rootDir>/.scripts/utils/jest-global.js"],
+	setupFilesAfterEnv: ["<rootDir>/.scripts/jest/jest-global.js"],
 
 	testEnvironment: "jsdom",
 
 	testMatch: [
 		"**/__tests__/**/*.[jt]s?(x)",
-		"**/?(*.)+(spec|test).[tj]s?(x)"
 	],
 
 	"transform": {
 		"^.+\\.[jt]sx?$": "babel-jest",
-	},
-
-	transformIgnorePatterns: [
-		"\\\\node_modules\\\\"
-	],
+	}
 };

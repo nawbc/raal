@@ -11,13 +11,6 @@ body {
   margin: 0px;
 }
 .muguet-container {
-  // h1 {
-  // 	height: 70px;
-  // 	margin: 0px;
-  // 	text-align: center;
-  // 	line-height: 70px;
-  // 	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-  // }
   .animationWrapper {
     position: absolute;
     @include center(525px, 470px);
@@ -27,6 +20,7 @@ body {
     border-radius: 20px;
 
     h1 {
+      overflow-wrap: break-word;
       border-radius: 0px 0px 20px 20px;
       height: 70px;
       margin: 0px;
@@ -37,6 +31,7 @@ body {
       color: #008a12;
       @media only screen and (max-width: 768px) {
         font-size: 30px;
+        font-size: 1.5rem;
       }
     }
 

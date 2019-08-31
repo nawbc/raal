@@ -47,6 +47,10 @@
 	],
 	"cSpell.ignoreWords": [
 		"codecov",
-		"corejs"
+		"corejs",
+		"onstatechange",
+		"onupdatefound",
+		"raal",
+		"svgr"
 	],
 }

@@ -1,5 +1,8 @@
 'use strict'
 
+process.env.BABEL_ENV = 'production';
+process.env.NODE_ENV = 'production';
+
 const { exec } = require('child_process');
 const chalk = require('react-dev-utils/chalk');
 const args = process.argv.slice(2)[0]

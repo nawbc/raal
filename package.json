@@ -1,12 +1,12 @@
 {
-	"name": "create-muguet-lib",
+	"name": "raal",
 	"version": "0.0.2-alpha1",
-	"description": "create react template that uses for creating react library, document site and dev server",
+	"description": "build react application and library",
 	"scripts": {
 		"cz:init": "commitizen init cz-conventional-changelog --save --save-exact"
 	},
 	"bin": {
-		"create-muguet-lib": "cli.js"
+		"raal": "cli.js"
 	},
 	"keywords": [
 		"react",
@@ -24,10 +24,8 @@
 		"semver": "^6.2.0"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.5.5",
 		"commitizen": "^4.0.3",
-		"cz-conventional-changelog": "^3.0.2",
-		"eslint-plugin-react": "^7.14.3"
+		"cz-conventional-changelog": "^3.0.2"
 	},
 	"repository": "https://github.com/sewerganger/create-muguet-lib",
 	"config": {
