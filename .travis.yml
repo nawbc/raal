@@ -14,7 +14,7 @@ install:
   - npm install
 
 script:
-  - npm test
+  - npm run test:ci
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t bd585d3e-9ca3-4ad9-832d-33cb3fd10359

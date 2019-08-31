@@ -23,7 +23,7 @@
 		"test": "npm run test:unit && npm run test:e2e",
 		"test:unit": "jest -u",
 		"test:e2e": "jest --config ./jest.e2e.js",
-		"test:ci": "cross-env CI=true npm run test"
+		"test:ci": "cross-env CI=true node ./.scripts/utils/ciTest.js"
 	},
 	"engines": {
 		"npm": "6.10.1",

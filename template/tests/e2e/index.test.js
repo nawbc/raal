@@ -11,7 +11,6 @@ const theUrl = url.format({
 })
 
 jest.setTimeout(30000)
-console.log(url)
 
 describe('muguet test', () => {
 	beforeAll(async () => {
