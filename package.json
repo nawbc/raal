@@ -27,7 +27,7 @@
 		"commitizen": "^4.0.3",
 		"cz-conventional-changelog": "^3.0.2"
 	},
-	"repository": "https://github.com/sewerganger/create-muguet-lib",
+	"repository": "https://github.com/sewerganger/raal",
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"

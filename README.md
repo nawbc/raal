@@ -1,16 +1,16 @@
-# create-muguet-lib
+# raal
 
-![](https://travis-ci.com/sewerganger/create-muguet-lib.svg?branch=master)
-![](https://img.shields.io/github/languages/top/sewerganger/create-muguet-lib)
-![](https://img.shields.io/github/package-json/v/sewerganger/create-muguet-lib/master)
-![](https://img.shields.io/github/license/sewerganger/create-muguet-lib)
-[![codecov](https://codecov.io/gh/sewerganger/create-muguet-lib/branch/master/graph/badge.svg)](https://codecov.io/gh/sewerganger/create-muguet-lib)
+![](https://travis-ci.com/sewerganger/raal.svg?branch=master)
+![](https://img.shields.io/github/languages/top/sewerganger/raal)
+![](https://img.shields.io/github/package-json/v/sewerganger/raal/master)
+![](https://img.shields.io/github/license/sewerganger/raal)
+[![codecov](https://codecov.io/gh/sewerganger/raal/branch/master/graph/badge.svg)](https://codecov.io/gh/sewerganger/raal)
 
-<img src="https://raw.githubusercontent.com/sewerganger/create-muguet-lib/master/doc/logo.jpg" width="100px"/>
+<img src="https://raw.githubusercontent.com/sewerganger/raal/master/doc/logo.jpg" width="100px"/>
 
 这是一个用于 react ui 组件库开发的脚手架, 具有文档网站开发,ui 组件开发的功能
 
-[English](https://github.com/sewerganger/create-muguet-lib/blob/master/README-en.md)
+[English](https://github.com/sewerganger/raal/blob/master/README-en.md)
 
 ## ❤ 推荐使用 vscode
 ## 历史
@@ -43,7 +43,7 @@
 
 ## 1. 安装
 
-`npm i create-muguet-lib -g`
+`npm i raal -g`
 
 ## 2. 使用方法
 
@@ -121,7 +121,7 @@ Options:
 
 ### 例子
 
-1. create-muguet-lib app (不能含有 react)
+1. raal app (不能含有 react)
 2. npm install 安装依赖
 
 ## 3. 注意
@@ -134,4 +134,4 @@ Options:
 
 ## 5. 其他
 
-如果你想只用于 app 开发也行 毕竟我 copy 了很多 create-react-app 的代码 🤭🤭
+如果你想只用于 app 开发也行 毕竟我 copy 了很多 raal 的代码 🤭🤭

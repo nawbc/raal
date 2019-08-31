@@ -1,21 +1,21 @@
-# create-muguet-lib
-![](https://travis-ci.com/sewerganger/create-muguet-lib.svg?branch=master)
-![](https://img.shields.io/github/languages/top/sewerganger/create-muguet-lib)
-![](https://img.shields.io/github/package-json/v/sewerganger/create-muguet-lib/master)
-![](https://img.shields.io/github/license/sewerganger/create-muguet-lib)
-[![codecov](https://codecov.io/gh/sewerganger/create-muguet-lib/branch/master/graph/badge.svg)](https://codecov.io/gh/sewerganger/create-muguet-lib)
+# raal
+![](https://travis-ci.com/sewerganger/raal.svg?branch=master)
+![](https://img.shields.io/github/languages/top/sewerganger/raal)
+![](https://img.shields.io/github/package-json/v/sewerganger/raal/master)
+![](https://img.shields.io/github/license/sewerganger/raal)
+[![codecov](https://codecov.io/gh/sewerganger/raal/branch/master/graph/badge.svg)](https://codecov.io/gh/sewerganger/raal)
 
-<img src="https://raw.githubusercontent.com/sewerganger/create-muguet-lib/master/doc/logo.jpg" width="100px"/>
+<img src="https://raw.githubusercontent.com/sewerganger/raal/master/doc/logo.jpg" width="100px"/>
 
 This is a scaffold for react UI component library development. It has the functions of document website development and UI component development.
 
-[中文](https://github.com/sewerganger/create-muguet-lib/blob/master/README.md)
+[中文](https://github.com/sewerganger/raal/blob/master/README.md)
 
 ## ❤ recommend using vscode
 
 ## 1.Installation
 
-`npm i create-muguet-lib -g`
+`npm i raal -g`
 
 ## 2. Usage
 
@@ -77,7 +77,7 @@ Options:
 
 ### Examples
 
-Create-muguet-lib app (cannot contain react)
+raal app (cannot contain react)
 
 npm install installation dependency
 
