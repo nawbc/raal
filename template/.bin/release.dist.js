@@ -2,11 +2,7 @@
 
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
-<<<<<<< HEAD
-process.env.MUGUET_ENV = 'webpack';
-=======
 process.env.RAAL_ENV = 'webpack';
->>>>>>> fix webpack can't use compass, add sourcemap for css when babel
 
 const fs = require('fs-extra');
 const webpack = require('webpack');

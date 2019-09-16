@@ -6,6 +6,7 @@
 	},
 	"extends": [
 		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended"
 	],
 	"globals": {
 		"Atomics": "readonly",
@@ -13,17 +14,18 @@
 		"page": true,
 		"browser": true,
 		"context": true,
-		"jestPuppeteer": true
+		"jestPuppeteer": true //https://github.com/smooth-code/jest-puppeteer
 	},
 	"settings": {
 		"react": {
 			"createClass": "createReactClass",
 			"pragma": "React",
-			"version": "detect",
+			"version": "detect"
 		}
 	},
 	"plugins": [
-		"react"
+		"react",
+		"react-hooks"
 	],
 	"parserOptions": {
 		"ecmaFeatures": {
@@ -34,23 +36,24 @@
 		"jsx": true,
 		"ecmaVersion": 2018,
 		"project": "./tsconfig.json",
-		"useJSXTextNode": true,
+		"useJSXTextNode": true
 	},
 	"parser": "@typescript-eslint/parser",
 	"rules": {
 		"no-undef": "error",
-		"semi": "error",
+		"semi": "warn",
 		"no-multi-spaces": [
 			"error",
 			{
 				"ignoreEOLComments": true
 			}
 		],
+		"no-unused-vars": "warn",
 		"comma-dangle": [
-			"error",
+			"warn",
 			{
 				"arrays": "never",
-				"objects": "always",
+				"objects": "never",
 				"imports": "never",
 				"exports": "never",
 				"functions": "never"
@@ -60,11 +63,13 @@
 			"error",
 			{
 				"allow": [
-					"log",
-					"error",
-					"info",
 					"warn",
-					"table"
+					"log",
+					"time",
+					"timeEnd",
+					"info",
+					"table",
+					"error"
 				]
 			}
 		],
@@ -74,10 +79,14 @@
 		"@typescript-eslint/no-empty-interface": 0,
 		"@typescript-eslint/explicit-function-return-type": 0,
 		"@typescript-eslint/no-object-literal-type-assertion": 0,
+		"@typescript-eslint/explicit-member-accessibility": 0,
+		"@typescript-eslint/no-unused-vars": 0,
 		"react/self-closing-comp": 1,
 		"@typescript-eslint/indent": [
-			"error",
+			"warn",
 			"tab"
-		]
+		],
+		"react-hooks/rules-of-hooks": "warn",
+		"react-hooks/exhaustive-deps": "warn"
 	}
 }
